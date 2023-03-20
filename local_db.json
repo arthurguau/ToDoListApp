@@ -1,0 +1,87 @@
+{
+  "tasks": [
+    {
+      "title": "Completed task Title",
+      "body": "This is a taskthat I created with the API",
+      "status": "In Progress",
+      "ownerId": 1,
+      "id": 2
+    },
+    {
+      "title": "Completed task Title",
+      "body": "This is a task that I created with the API",
+      "status": "Completed",
+      "ownerId": 1,
+      "id": 3
+    },
+    {
+      "title": "Completed taskTitle",
+      "body": "This is a task that I created with the API",
+      "status": "Completed",
+      "ownerId": 1,
+      "id": 4
+    },
+    {
+      "title": "New task Title",
+      "body": "This is a task that I created with the API",
+      "status": "New",
+      "ownerId": 1,
+      "id": 5
+    },
+    {
+      "title": "New task Title",
+      "body": "This is a task that I created with the API",
+      "status": "New",
+      "ownerId": 1,
+      "id": 6
+    },
+    {
+      "title": "The second task",
+      "body": "This is my second task",
+      "status": "New",
+      "ownerId": 1,
+      "id": 7
+    },
+    {
+      "title": "The second task",
+      "body": "This is my second task",
+      "status": "New",
+      "ownerId": 1,
+      "id": 8
+    },
+    {
+      "title": "The second blog post",
+      "body": "This is my second task",
+      "status": "New",
+      "ownerId": 1,
+      "id": 9
+    },
+    {
+      "title": "The second task",
+      "body": "This is my second task",
+      "status": "New",
+      "ownerId": 1,
+      "id": 10
+    },
+    {
+      "title": "The Swrn task",
+      "body": "This is my second task",
+      "ownerId": 1,
+      "id": 11
+    },
+    {
+      "title": "The FIRST task",
+      "body": "This is my first task",
+      "owner": 1,
+      "id": 12
+    }
+  ],
+  "comments": [],
+  "owners": [
+    {
+      "id": 1,
+      "name": "John Gu"
+    }
+  ],
+  "avatars": []
+}
