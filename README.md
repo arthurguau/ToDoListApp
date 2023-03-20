@@ -42,12 +42,12 @@ There is a secret profile (profile 1) that you are not supposed to be able to ac
 The find the secret challenge can be solved using the following routes:
 
 ```
-GET    /blogposts
-GET    /blogposts/<id>
+GET    /tasks
+GET    /tasks/<id>
 GET    /comments
 GET    /comments/<id>
-GET    /profiles
-GET    /profiles/<id>
+GET    /owners
+GET    /owners/<id>
 ```
 
 You may also need to use the following parameters:
@@ -57,8 +57,8 @@ You may also need to use the following parameters:
 To include children resources, add `_embed`
 
 ```
-GET /blogposts?_embed=comments
-GET /blogposts/1?_embed=comments
+GET /tasks?_embed=comments
+GET /tasks/1?_embed=comments
 ```
 
 To include parent resource, add `_expand`
@@ -78,26 +78,22 @@ There are (at least) two 500 errors to be found in this little application. See 
 The find the 500 challenge has the following routes:
 
 ```
-GET    /blogposts
-GET    /blogposts/<id>
+GET    /tasks
+GET    /tasks/<id>
 GET    /comments
 GET    /comments/<id>
-GET    /profiles
-GET    /profiles/<id>
-GET    /avatars
-GET    /avatars/<id>
+GET    /owners
+GET    /owners/<id>
 ```
 POST and PUT commands are also available. To figure out what parameters they take, just do a GET call on the corresponding resource to see what parameters it has.
 ```
-POST    /blogposts
+POST    /tasks
 POST    /comments
-POST    /profiles
+POST    /owners
 POST    /avatars
 
-PUT    /blogposts/<id>
+PUT    /tasks/<id>
 PUT    /comments/<id>
-PUT    /profiles/<id>
-PUT    /avatars/<id>
 ```
 
 DELETE commands will also work, but you shouldn't need them to solve this challenge
@@ -118,7 +114,7 @@ GET /blogposts/1?_embed=comments
 To include parent resource, add `_expand`
 
 ```
-GET /comments?_expand=blogpost
-GET /comments/1?_expand=blogpost
+GET /comments?_expand=task
+GET /comments/1?_expand=task
 ```
 
