@@ -1,5 +1,9 @@
 {
     "devDependencies": {
         "json-server": "^0.14.2"
+    },
+    "dependencies": {
+        "newman-reporter-csv": "^1.3.0",
+        "newman-reporter-html": "^1.0.5"
     }
 }

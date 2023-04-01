@@ -1,87 +1,42 @@
 {
   "tasks": [
     {
-      "title": "Completed task Title",
-      "body": "This is a taskthat I created with the API",
-      "status": "In Progress",
-      "ownerId": 1,
+      "id": 1,
+      "title": "The Second task",
+      "body": "YYY task",
+      "status": "Completed",
+      "ownerId": "1"
+    },
+    {
+      "title": "The Second task",
+      "body": "This is my second task",
+      "status": "New",
+      "ownerId": "1",
       "id": 2
-    },
-    {
-      "title": "Completed task Title",
-      "body": "This is a task that I created with the API",
-      "status": "Completed",
-      "ownerId": 1,
-      "id": 3
-    },
-    {
-      "title": "Completed taskTitle",
-      "body": "This is a task that I created with the API",
-      "status": "Completed",
-      "ownerId": 1,
-      "id": 4
-    },
-    {
-      "title": "New task Title",
-      "body": "This is a task that I created with the API",
-      "status": "New",
-      "ownerId": 1,
-      "id": 5
-    },
-    {
-      "title": "New task Title",
-      "body": "This is a task that I created with the API",
-      "status": "New",
-      "ownerId": 1,
-      "id": 6
-    },
-    {
-      "title": "The second task",
-      "body": "This is my second task",
-      "status": "New",
-      "ownerId": 1,
-      "id": 7
-    },
-    {
-      "title": "The second task",
-      "body": "This is my second task",
-      "status": "New",
-      "ownerId": 1,
-      "id": 8
-    },
-    {
-      "title": "The second blog post",
-      "body": "This is my second task",
-      "status": "New",
-      "ownerId": 1,
-      "id": 9
-    },
-    {
-      "title": "The second task",
-      "body": "This is my second task",
-      "status": "New",
-      "ownerId": 1,
-      "id": 10
-    },
-    {
-      "title": "The Swrn task",
-      "body": "This is my second task",
-      "ownerId": 1,
-      "id": 11
-    },
-    {
-      "title": "The FIRST task",
-      "body": "This is my first task",
-      "owner": 1,
-      "id": 12
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "taskId": 1,
+      "ownerId": 1
+    }
+  ],
   "owners": [
     {
       "id": 1,
-      "name": "John Gu"
+      "name": "John Smith"
     }
   ],
-  "avatars": []
+  "avatars": [
+    {
+      "id": 1,
+      "description": "A Public avatar?",
+      "url": "www.example.com/avatar.jpg",
+      "ownerId": 1,
+      "commentId": 1,
+      "taskId": 1
+    }
+  ]
 }

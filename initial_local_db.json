@@ -2,8 +2,8 @@
   "tasks": [
     {
       "id": 1,
-      "title": "The FIRST blog post",
-      "body": "This is my first blog post",
+      "title": "The first task",
+      "body": "This is my first task",
       "status": "New",
       "ownerId": 1
     }

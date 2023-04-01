@@ -22,10 +22,10 @@
 											"var jsonData = pm.response.json();\r",
 											"var firstTask = {\r",
 											"    \"id\": 1,\r",
-											"    \"title\": \"The FIRST task\",\r",
+											"    \"title\": \"The first task\",\r",
 											"    \"body\": \"This is my first task\",\r",
 											"    \"status\": \"New\",\r",
-											"    \"ownerId\": 9\r",
+											"    \"ownerId\": 1\r",
 											"}\r",
 											"pm.test(\"Check first task Data\", function () {    \r",
 											"    //assume that the first task won't change\r",
@@ -68,8 +68,8 @@
 									"script": {
 										"exec": [
 											"var jsonData = pm.response.json();\r",
-											"pm.test(\"Check that the blogpost has required fields\", function () {\r",
-											"        utils.check_blogpost_keys(jsonData);\r",
+											"pm.test(\"Check that the task has required fields\", function () {\r",
+											"        utils.check_task_keys(jsonData);\r",
 											"});\r",
 											""
 										],
@@ -81,12 +81,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}blogposts/{{blogpost_id}}",
+									"raw": "{{base_url}}/tasks/{{task_id}}",
 									"host": [
-										"{{base_url}}blogposts"
+										"{{base_url}}"
 									],
 									"path": [
-										"{{blogpost_id}}"
+										"tasks",
+										"{{task_id}}"
 									]
 								}
 							},
@@ -107,10 +108,10 @@
 											"    pm.response.to.have.status(201);\r",
 											"});\r",
 											"\r",
-											"var post_id = jsonData.id;\r",
+											"var task_id = jsonData.id;\r",
 											"var base_url = pm.environment.get(\"base_url\")\r",
 											"\r",
-											"pm.sendRequest({url:`${base_url}/tasks/${post_id}`,method: 'DELETE'}, function (err, response) {\r",
+											"pm.sendRequest({url:`${base_url}/tasks/${task_id}`,method: 'DELETE'}, function (err, response) {\r",
 											"    pm.test(\"Delete Response is OK\", function () {\r",
 											"        pm.expect(response.status).to.eql('OK');\r",
 											"    });\r",
@@ -243,7 +244,7 @@
 										"exec": [
 											"var expected_response = {\r",
 											"    \"id\": 1,\r",
-											"    \"title\": \"The FIRST task\",\r",
+											"    \"title\": \"The first task\",\r",
 											"    \"body\": \"This is my first task\",\r",
 											"    \"status\": \"New\",\r",
 											"    \"ownerId\": 1,\r",
@@ -306,8 +307,8 @@
 										"exec": [
 											"var expected_response = {\r",
 											"    \"id\": 1,\r",
-											"    \"title\": \"The FIRST task\",\r",
-											"    \"body\": \"This is my first tasl\",\r",
+											"    \"title\": \"The first task\",\r",
+											"    \"body\": \"This is my first task\",\r",
 											"    \"status\": \"New\",\r",
 											"    \"ownerId\": 1,\r",
 											"    \"owner\": {\r",
@@ -570,7 +571,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"The second blog post\",\r\n    \"body\": \"This is my second blog post. Look I modified it!\",\r\n    \"profileId\": 1\r\n}\r\n",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
